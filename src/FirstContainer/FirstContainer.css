@@ -96,3 +96,58 @@
     background-color: rgb(175, 175, 175);
 }
 
+.carousel_buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.carousel_1 {
+    color: rgb(220,157,73);
+    border: 1px solid rgb(220,157,73);
+    background-color: rgb(248,248,252);
+    border-radius: 100%;
+    padding: 0px 3px 2px 3.3px;
+    margin-right: 8px;
+}
+
+.carousel_1:hover {
+    background-color: rgb(214, 214, 214);
+}
+.carousel_1:active {
+    background-color: rgb(175, 175, 175);
+}
+
+.carousel_2:hover {
+    background-color: rgb(214, 214, 214);
+}
+.carousel_2:active {
+    background-color: rgb(175, 175, 175);
+}
+
+.carousel_3:hover {
+    background-color: rgb(214, 214, 214);
+}
+.carousel_:active {
+    background-color: rgb(175, 175, 175);
+}
+
+.carousel_2 {
+    color: rgb(220,157,73);
+    border: 1px;
+    border-radius: 100%;
+    background-color: rgb(248,248,252);
+    padding: 0px 3px 2px 3.3px;
+    margin-right:8px;
+}
+
+.carousel_3 {
+    color: rgb(220,157,73);
+    border: 1px;
+    border-radius: 100%;
+    background-color: rgb(248,248,252);
+    padding: 0px 3px 2px 3.3px;
+}
+
+

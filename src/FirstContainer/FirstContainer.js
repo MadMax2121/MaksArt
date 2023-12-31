@@ -32,6 +32,12 @@ function FirstContainer() {
         </div>
         <img className="chair_image"src="/slider/slider1.png" alt="" />
       </div>
+
+      <div className='carousel_buttons'>
+        <button className='carousel_1'>●</button>
+        <button className='carousel_2'>o</button>
+        <button className='carousel_3'>o</button>
+      </div>
     </main>
   )
 }
