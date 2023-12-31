@@ -1,0 +1,88 @@
+.main {
+    display:flex;
+    justify-content: space-between;
+    width: 65%;
+
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  rgb(97,97,97);    
+    
+}
+
+.span {
+    color: rgb(220,157,73);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+.button{
+    font-size:larger;
+    border: 2px;
+    background-color: rgb(248,248,252);
+    color: rgb(97,97,97);
+    padding: 14px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    border-color: rgb(220,157,73);  
+}
+
+.button:hover {
+    background-color: rgb(214, 214, 214);
+    color: rgb(220,157,73);
+}
+
+.button:active {
+    background-color: rgb(97,97,97);
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 10%;
+}
+.nav-icon {
+    border: 1px;
+    border-radius: 100%;
+    background-color: rgb(248,248,252);
+    padding:7px 7px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.nav-icon:hover {
+    background-color: rgb(214, 214, 214);
+}
+.nav-icon:active {
+    background-color: rgb(175, 175, 175);
+}
+.search {
+    height: 0.4cm;
+    width: 0.4cm;
+    filter: invert(71%) sepia(6%) saturate(105%) hue-rotate(349deg) brightness(88%) contrast(85%);
+}
+.settings {
+    height: 0.4cm;
+    width: 0.4cm;
+    filter: invert(71%) sepia(6%) saturate(105%) hue-rotate(349deg) brightness(88%) contrast(85%);
+}
+.cart {
+    height: 0.4cm;
+    width: 0.4cm;
+    filter: invert(71%) sepia(6%) saturate(105%) hue-rotate(349deg) brightness(88%) contrast(85%);
+}
+
+
+

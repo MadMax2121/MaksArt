@@ -1,0 +1,98 @@
+.general {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(248,248,252);
+    margin-top: 60px;
+    
+}
+
+.main_text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex:0.57;
+}
+
+.first_line{
+    font-size:16px;
+    color: rgb(149,140,128);
+}
+
+.first_price {
+    font-weight: bold;
+    color: rgb(97,97,97);
+}
+
+.second_price {
+    font-weight: bolder;
+    text-decoration: line-through;
+    color: rgb(158,156,154);
+}
+.second_line {
+    font-size: 30px;
+    color: rgb(97,97,97);
+    margin-top:0.5px;
+
+}
+
+.paragraph {
+    font-size: 12px;
+    color: rgb(158,156,154);
+    line-height: 1.8;
+    margin-top: 0.3px;
+}
+
+.buttons {
+    display: flex;
+    padding-top: 24px;
+
+}
+.chair_image {
+    margin-left: 40px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.add_cart{
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: rgb(220,157,73);
+    border: 2px;
+    padding: 14px 14px;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.add_cart > img {
+    height:16px;
+    width:16px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    padding-right:5px;
+}
+.add_cart:hover {
+    background-color: rgb(214, 214, 214);
+}
+
+.add_cart:active {
+    background-color: rgb(175, 175, 175);
+}
+.more_info {
+    border:2px;
+    background-color: rgb(248,248,252);
+    color: rgb(220,157,73);
+    padding: 14px 20px;
+    font-size: 16px;
+
+}
+
+.more_info:hover {
+    background-color: rgb(214, 214, 214);
+}
+.more_info:active {
+    background-color: rgb(175, 175, 175);
+}
+
