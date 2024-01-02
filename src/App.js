@@ -2,6 +2,7 @@ import './App.css';
 import Header from './Header/Header.js';
 import FirstContainer from './FirstContainer/FirstContainer.js';
 import FirstThree from './FirstThree/FirstThree';
+import NewArrivals from './NewArrivals/NewArrivals';
 
 
 // In your component
@@ -15,8 +16,9 @@ function App() {
         <FirstContainer />
         </div>
       
-        <div className='secondSection'>
+        <div className='secondSection' style={{"background-color":"white"}}>
         <FirstThree/>
+        <NewArrivals/>
         </div>
         
 

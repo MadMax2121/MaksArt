@@ -1,0 +1,17 @@
+.grids {
+    display: grid;
+    grid-template-columns:5cm 5cm 5cm 5cm;
+    grid-template-rows: 10cm 10cm;
+    justify-content: center;
+}
+
+.mapping > img {
+    transform: scale(0.7);
+    border: 2px;
+    background-color: rgb(248, 248, 252);
+    padding: 2cm 2cm;
+}
+
+.mapping {
+    height: 10cm
+}
