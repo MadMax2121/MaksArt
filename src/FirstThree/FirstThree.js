@@ -1,7 +1,7 @@
 import React from 'react'
-import "./NewArrivals.css"
+import "./FirstThree.css"
 
-function NewArrivals() {
+function FirstThree() {
     return (
         <main className='new_arrivals_main'>
             <div className='first3'>
@@ -30,17 +30,19 @@ function NewArrivals() {
                             <button>Discover More</button>
 
                         </div>
+                    </div>
 
+                    <div className='third_chair'>
+                        <img src="/popular-products/p3.png" alt="" />
+                        <h2>Hanging Lamp</h2>
+                        <p>Inventore ipsam, ex eaque saepe nesciunt nostrum 
+                        voluptate voluptatum.</p>
                     </div>
             </div>
-
-            <h1>New Arrivals</h1>
-
-            <div>dvsdbu9bpb</div>
 
 
         </main>
     )
 }
 
-export default NewArrivals
+export default FirstThree;

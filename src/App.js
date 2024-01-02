@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './Header/Header.js';
 import FirstContainer from './FirstContainer/FirstContainer.js';
-import NewArrivals from './NewArrivals/NewArrivals';
+import FirstThree from './FirstThree/FirstThree';
 
 
 // In your component
@@ -16,7 +16,7 @@ function App() {
         </div>
       
         <div className='secondSection'>
-        <NewArrivals />
+        <FirstThree/>
         </div>
         
 
