@@ -79,6 +79,15 @@
     
 }
 
+.second_chair_text > button:hover {
+    color: white;
+    background-color: rgb(146, 145, 143);
+}
+
+.second_chair_text > button:active {
+    
+    background-color: rgb(97,97,97);
+}
 .third_chair {
     border-radius: 2px;
     background-color: rgb(248,248,252);

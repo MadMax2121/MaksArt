@@ -61,12 +61,15 @@ function NewArrivals() {
     ]
     return (
         <main>
-            <h1>New Arrivals</h1>
+            <h1 className='new_arrivals'>New Arrivals</h1>
             <div className='grids'>
                 {grids.map((grids) => (
                     <div className='mapping'>
-                        <img src={grids.img} alt="" />
-                        {grids.sale ? <span className="sale_sign" style={{"background-color" : grids.color}}>Sale </span>: ""}
+                        <div className='border'>
+                            <img src={grids.img} alt="" />
+                        </div>
+                            {grids.sale ? <span className="sale_sign" style={{ "background-color": grids.color }}>Sale </span> : ""}
+                        
                         <h2>{grids.title}</h2>
                         <div>{grids.price}</div>
                     </div>
