@@ -1,8 +1,7 @@
 .banner > img {
     position: relative;
-    width: 102%;
-    margin-right: 5cm;
-    left: -20px;
+    width: 1440px;
+    height: 11cm;
     opacity: 1;
 }
 .banner {

@@ -4,6 +4,7 @@ import FirstContainer from './FirstContainer/FirstContainer.js';
 import FirstThree from './FirstThree/FirstThree';
 import NewArrivals from './NewArrivals/NewArrivals';
 import FeaturedProducts from './FeaturedProducts/FeaturedProducts';
+import Footer from './Footer/Footer';
 
 
 // In your component
@@ -23,7 +24,8 @@ function App() {
         </div>
 
         <FeaturedProducts/>
-  
+        <Footer/>
+        
         
 
 
