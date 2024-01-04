@@ -1,0 +1,52 @@
+.banner > img {
+    position: relative;
+    width: 102%;
+    margin-right: 5cm;
+    left: -20px;
+    opacity: 1;
+}
+.banner {
+    position: relative;
+}
+.banner_text {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    height: 4cm;
+    width:9cm;
+    color: white;
+}
+
+.banner_text > h2 {
+    font-size: 22px;
+
+}
+
+.banner_text > p {
+    font-size: 12px;
+    line-height: 0.45cm;
+    margin-bottom: 4px;
+   
+}
+
+.banner_text > div {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.banner_text > button {
+    font-size: 16px;
+    border: 2px;
+    background-color: rgb(220,157,73);
+    color: white;
+    padding: 14px 28px;
+}
+
+.banner_text > button:hover {
+    background-color: rgb(214, 214, 214);
+}
+
+.banner_text > button:active {
+    background-color: rgb(175, 175, 175);
+}

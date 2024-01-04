@@ -3,6 +3,7 @@ import Header from './Header/Header.js';
 import FirstContainer from './FirstContainer/FirstContainer.js';
 import FirstThree from './FirstThree/FirstThree';
 import NewArrivals from './NewArrivals/NewArrivals';
+import FeaturedProducts from './FeaturedProducts/FeaturedProducts';
 
 
 // In your component
@@ -20,6 +21,8 @@ function App() {
         <FirstThree/>
         <NewArrivals/>
         </div>
+
+        <FeaturedProducts/>
         
 
 
