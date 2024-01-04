@@ -50,3 +50,48 @@
 .banner_text > button:active {
     background-color: rgb(175, 175, 175);
 }
+
+.star {
+    filter: invert(79%) sepia(74%) saturate(336%) hue-rotate(356deg) brightness(96%) contrast(89%);
+    width: 20px;
+    height: 20px;
+}
+
+.all_ratings {
+    display:grid;
+    grid-template-columns: 6.3cm 6.3cm 6.3cm 6.3cm;
+    justify-content: center;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.star_review {
+    display: flex;
+}
+
+.rating > img {
+    transform: scale(0.7);
+    margin-bottom: -30px;
+}
+.star_review > div {
+    margin-left: 10px;
+    color: rgb(167,167,167);
+    
+    
+}
+.star_review {
+    transform: scale(0.8);
+    
+}
+.featured_products > h2 {
+    font-size: 20px;
+    color: rgb(97,97,97);
+    display: flex;
+    justify-content: center;
+    padding-top:16px;
+}
