@@ -24,6 +24,7 @@ function App() {
         </div>
 
         <FeaturedProducts/>
+        <div></div>
         <Footer/>
         
         
