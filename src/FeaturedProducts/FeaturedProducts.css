@@ -95,3 +95,49 @@
     justify-content: center;
     padding-top:16px;
 }
+
+.latest_blog {
+    display: flex;
+    justify-content: center;
+}
+
+.blog_img {
+    height: 5cm;
+    width: 7.15cm;
+}
+
+.blog {
+    display:flex;
+    flex-direction: column;
+    margin-left:50px;
+}
+.blog_title {
+    font-size: 13px;
+    text-align: left;
+    color: rgb(97,97,97);
+    margin-bottom: 0px;
+}
+
+.latest_b {
+    font-size: 20px;
+    color: rgb(97,97,97);
+    display: flex;
+    justify-content: center;
+    padding:32px;
+    
+}
+
+.author {
+    font-size: 11px;
+    text-align: left;
+    color: rgb(185,181,177);
+    margin-bottom: 0px;
+}
+
+.blog > p {
+    font-size: 10px;
+    color: rgb(146, 145, 143);
+    text-align: left;
+    line-height: 1.8;
+    width: 7cm;
+}

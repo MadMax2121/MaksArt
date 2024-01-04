@@ -46,25 +46,62 @@ function FeaturedProducts() {
         <h2>Featured Products</h2>
 
         <div className='all_ratings'>
-        {reviews.map((review) => (
-          <div className='rating'>
-            <img src={review.img} alt="" />
-            <div className='star_review'>
-              <img className="star" src="/star/star.svg" alt="" />
-              <img className="star" src="/star/star.svg" alt="" />
-              <img className="star" src="/star/star.svg" alt="" />
-              <img className="star" src="/star/star.svg" alt="" />
-              <img className="star" style={{ filter: "invert(78%) sepia(5%) saturate(19%) hue-rotate(319deg) brightness(86%) contrast(86%)" }} src="/star/star.svg" alt="" />
-              <div>(45 Reviews)</div>
+          {reviews.map((review) => (
+            <div className='rating'>
+              <img src={review.img} alt="" />
+              <div className='star_review'>
+                <img className="star" src="/star/star.svg" alt="" />
+                <img className="star" src="/star/star.svg" alt="" />
+                <img className="star" src="/star/star.svg" alt="" />
+                <img className="star" src="/star/star.svg" alt="" />
+                <img className="star" style={{ filter: "invert(78%) sepia(5%) saturate(19%) hue-rotate(319deg) brightness(86%) contrast(86%)" }} src="/star/star.svg" alt="" />
+                <div>(45 Reviews)</div>
+              </div>
+              <div style={{ color: "rgb(97,97,97)", "font-weight": "bold", "font-size": "13px", "margin-top": "6px" }}>{review.name}</div>
+              <div style={{ color: "rgb(97,97,97)", "font-size": "14px", "margin-top": "8px" }}>{review.price}</div>
             </div>
-            <div style = {{color:"rgb(97,97,97)", "font-weight":"bold", "font-size":"13px", "margin-top":"6px"}}>{review.name}</div>
-            <div style = {{color:"rgb(97,97,97)", "font-size":"14px", "margin-top":"8px"}}>{review.price}</div>
-          </div>
-        )
-        )}
+          )
+          )}
+        </div>
+      </div>
+        
+      <h2 className='latest_b'> Latest Blog</h2>
+      <div className='latest_blog'>
+        <div className='blog'>
+          <img className = "blog_img" src="/blog/b1.jpg" alt="" />
+
+          <h2 className='blog_title'>Why Brands are Looking at Local Language</h2>
+          <h2 className='author'>By Robert Norby / 18th March 2018</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error eos dolorem
+            velit harum, nobis repellendus. Ratione obcaecati consequatur...
+          </p>
         </div>
 
+        <div className='blog'>
+          <img className = "blog_img" src="/blog/b2.jpg" alt="" />
+
+          <h2 className='blog_title' >Why Brands are Looking at Local Language</h2>
+          <h2 className='author'>By Robert Norby / 18th March 2018</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error eos dolorem
+            velit harum, nobis repellendus. Ratione obcaecati consequatur...
+          </p>
+        </div>
+
+        <div className='blog'>
+          <img className = "blog_img" src="/blog/b3.jpg" alt="" />
+
+          <h2 className='blog_title' >Why Brands are Looking at Local Language</h2>
+          <h2 className='author'>By Robert Norby / 18th March 2018</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error eos dolorem
+            velit harum, nobis repellendus. Ratione obcaecati consequatur...
+          </p>
+        </div>
       </div>
+
+
     </main>
   )
 }
