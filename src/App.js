@@ -13,7 +13,7 @@ import Footer from './Footer/Footer';
 function App() {
   return (
     <div className="app">
-        <div style={{"background-color":"rgb(248, 248, 252)"}}>
+        <div style={{"background-color":"rgb(248, 248, 252)", "overflow-x": "hidden"}}>
         <Header />
         <FirstContainer />
         </div>

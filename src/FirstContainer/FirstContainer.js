@@ -102,9 +102,9 @@ function FirstContainer() {
     ];
 
     return (
-        <main>
+        <main style={{"overflow-x":"hidden"}}>
 
-            <div className="slide_content" style={{ transform: `translateX(-${currentSlide * 100/6}%)` }}>
+            <div className="slide_content" style={{ transform: `translateX(-${currentSlide * 16.53}%)` }}>
                 {slides}
             </div>
             <div className="carousel_buttons">

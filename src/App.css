@@ -8,3 +8,9 @@
 .firstContainer {
     background-color:rgb(248, 248, 252);
 }
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+    margin:0px;
+  }

@@ -4,7 +4,7 @@
     align-items: center;
     background-color: rgb(248, 248, 252);
     margin-top: 60px;
-     
+    overflow-x:hidden;
 
 }
 
@@ -119,6 +119,8 @@
     border: 1px;
     background-color: rgb(248, 248, 252); 
     margin-right: 8px;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .carousel:hover {
@@ -141,30 +143,10 @@
 }
   
 
-
-.carousel_1:active {
-    background-color: rgb(175, 175, 175);
-}
-
-.carousel_2:hover {
-    background-color: rgb(214, 214, 214);
-}
-
-.carousel_2:active {
-    background-color: rgb(175, 175, 175);
-}
-
-.carousel_3:hover {
-    background-color: rgb(214, 214, 214);
-}
-
-.carousel_:active {
-    background-color: rgb(175, 175, 175);
-}
-
 .slide_content {
     display: flex;
     width: 300%;
     margin-left: 22cm;
     transition: transform 0.5s ease;
+    
 }
