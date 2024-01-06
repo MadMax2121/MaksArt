@@ -104,8 +104,8 @@ function FirstContainer() {
     return (
         <main>
 
-            <div className="slide_content">
-                {slides[currentSlide]}
+            <div className="slide_content" style={{ transform: `translateX(-${currentSlide * 100/6}%)` }}>
+                {slides}
             </div>
             <div className="carousel_buttons">
                 {slides.map((_, index) => (

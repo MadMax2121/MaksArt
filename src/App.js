@@ -13,11 +13,10 @@ import Footer from './Footer/Footer';
 function App() {
   return (
     <div className="app">
-        <div className='firstContainer'>
+        <div style={{"background-color":"rgb(248, 248, 252)"}}>
         <Header />
         <FirstContainer />
         </div>
-      
         <div className='secondSection' style={{"background-color":"white"}}>
         <FirstThree/>
         <NewArrivals/>

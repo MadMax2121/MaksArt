@@ -4,7 +4,7 @@
     align-items: center;
     background-color: rgb(248, 248, 252);
     margin-top: 60px;
-    transition: transform 0.5s ease; 
+     
 
 }
 
@@ -162,19 +162,9 @@
     background-color: rgb(175, 175, 175);
 }
 
-.carousel_2 {
-    color: rgb(220, 157, 73);
-    border: 1px;
-    border-radius: 100%;
-    background-color: rgb(248, 248, 252);
-    padding: 0px 3px 2px 3.3px;
-    margin-right: 8px;
-}
-
-.carousel_3 {
-    color: rgb(220, 157, 73);
-    border: 1px;
-    border-radius: 100%;
-    background-color: rgb(248, 248, 252);
-    padding: 0px 3px 2px 3.3px;
+.slide_content {
+    display: flex;
+    width: 300%;
+    margin-left: 22cm;
+    transition: transform 0.5s ease;
 }

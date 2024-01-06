@@ -1,8 +1,7 @@
 .main {
     display:flex;
-    justify-content: space-between;
-    width: 65%;
-    margin-left: 250px;
+    justify-content: center;
+
 }
 
 .logo {
@@ -11,7 +10,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color:  rgb(97,97,97);    
+    color:  rgb(97,97,97);
+    margin-right: 5cm;   
     
 }
 
@@ -24,7 +24,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    width: 30%;
+    
 }
 
 .button{
@@ -52,7 +52,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    width: 10%;
+    margin-left: 5cm;
+    
 }
 .nav-icon {
     border: 1px;
