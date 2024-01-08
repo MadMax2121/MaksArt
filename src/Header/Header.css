@@ -1,22 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
 .main {
     display:flex;
-    overflow: hidden;
-    justify-content: center;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color:#8b0000;
     height: 3cm;
+    justify-content: space-evenly;
+    
  }
- 
  
  .logo {
    transform: scale(.6);
    
  }
  
- 
+ .menu  > button {
+   font-size: large;
+   font-family: "Montserrat";
+   font-weight: bold;
+   border: 2px;
+   margin-right: 14px;
+   background-color: white;
+   border-bottom: 3px solid transparent;
+ }
+
+ .menu {
+   padding-bottom: 14px;
+   
+ }
+
+ .menu > button:hover {
+   border-bottom-color: #8b0000; 
+   border-bottom-width: 1px;
+ }
+
+ .menu > button:active { 
+   border-bottom-width: 3px;
+ }
+
  .search_bar[type=text]{
-    transition: width 0.4s ease-in-out;
+    transition: width 0.3s ease-in-out;
     width:3.5cm;
     height: 25px;
     border-radius: 20px;
@@ -29,46 +52,23 @@
     background-size: 30px;
     background-repeat: no-repeat;
     padding-left: 40px;
+    
+    
  }
- 
  
  .search_bar[type=text]:focus {
     outline-color: #8b0000;
-    width: 100%;
+    width: 12cm;
    
  }
  
- 
- 
- .menu {
+ .header {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly; 
-    width: 12cm;
- }
- 
- 
- .button{
-    font-size:larger;
-    border: 2px;
-    background-color: rgb(248,248,252);
-    color: rgb(97,97,97);
-    padding: 14px 14px;
-    font-size: 13px;
-    cursor: pointer;
-    border-color: rgb(220,157,73); 
- }
- 
- 
- .button:hover {
-    background-color: rgb(214, 214, 214);
-    color: rgb(220,157,73);
- }
- 
- 
- .button:active {
-    background-color: rgb(97,97,97);
+    flex-direction: column;
+    justify-content: center;
+    width: 15cm;
+    margin-right: 4cm;
+   
  }
  
  
@@ -76,37 +76,25 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    margin-left: 5cm;
+   
    
  }
  .nav-icon {
-    border: 1px;
-    border-radius: 100%;
-    background-color: rgb(248,248,252);
-    padding:7px 7px;
-    font-size: 13px;
-    cursor: pointer;
+   border: 2px;
+   background-color: white;
+   cursor: pointer;
+
  }
  .nav-icon:hover {
-    background-color: rgb(214, 214, 214);
+    transform: scale(1.2);
  }
- .nav-icon:active {
-    background-color: rgb(175, 175, 175);
- }
- .search {
-    height: 0.4cm;
-    width: 0.4cm;
-    filter: invert(71%) sepia(6%) saturate(105%) hue-rotate(349deg) brightness(88%) contrast(85%);
- }
- .settings {
-    height: 0.4cm;
-    width: 0.4cm;
-    filter: invert(71%) sepia(6%) saturate(105%) hue-rotate(349deg) brightness(88%) contrast(85%);
+ 
+ .profile {
+    width: 25px;
+    height: 25px;
  }
  .cart {
-    height: 0.4cm;
-    width: 0.4cm;
-    filter: invert(71%) sepia(6%) saturate(105%) hue-rotate(349deg) brightness(88%) contrast(85%);
+   width: 25px;
+   height: 25px;
  }
  
