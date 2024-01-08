@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Slides.css"
 import { useState, useEffect } from 'react';
+import PanoramaFishEyeIcon from '@mui/icons-material/PanoramaFishEye';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 
 function Slides() {
@@ -131,7 +133,9 @@ function Slides() {
                        className={currentSlide === index ? 'active_carousel' : 'carousel'}
                        onClick={() => handleCarouselClick(index)}
                    >
-                       {currentSlide === index ? '●' : 'o'}
+                    <div className='period'>
+                       {currentSlide === index ? <FiberManualRecordIcon style={{width:"10px"}}/> : <PanoramaFishEyeIcon style={{width:"10px"}}/>}
+                    </div>
                    </button>
                ))}
            </div>

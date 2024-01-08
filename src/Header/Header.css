@@ -2,10 +2,11 @@
 .main {
     display:flex;
     border-bottom-style: solid;
-    border-bottom-width: 1px;
+    border-bottom-width: 3px;
     border-bottom-color:#8b0000;
     height: 3cm;
     justify-content: space-evenly;
+    margin-bottom: 50px;
     
  }
  
