@@ -3,7 +3,7 @@ import "./Footer.css"
 
 function Footer() {
     return (
-        <main style={{ "padding-top": "40px" }}>
+        <main style={{ paddingTop: "40px" }}>
             <div className='surface'>
             <div className='clients'>
                 <img src="/clients/c5.png" alt="" />
@@ -54,7 +54,7 @@ function Footer() {
                    <img src="/icons/behance.png" alt="" /> 
                 </div>
                 <p>
-                ©Copyright. Designed and Developed by Themesine
+                ©Copyright. Designed and Developed by Maxim Moskalenko
                 </p>
             </div>
         </main>

@@ -120,7 +120,7 @@ function Slides() {
    }, [slides.length]);
   
    return (
-       <main style={{"overflow-x":"hidden"}}>
+       <main style={{overflowX:"hidden"}}>
 
 
            <div className="slide_content" style={{ transform: `translateX(-${currentSlide * 16.53}%)` }}>

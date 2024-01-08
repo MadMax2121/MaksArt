@@ -68,7 +68,7 @@ function NewArrivals() {
                         <div className='border'>
                             <img src={grids.img} alt="" />
                         </div>
-                            {grids.sale ? <span className="sale_sign" style={{ "background-color": grids.color }}>Sale </span> : ""}
+                            {grids.sale ? <span className="sale_sign" style={{ backgroundColor: grids.color }}>Sale </span> : ""}
                         
                         <h2>{grids.title}</h2>
                         <div>{grids.price}</div>

@@ -57,8 +57,8 @@ function FeaturedProducts() {
                 <img className="star" style={{ filter: "invert(78%) sepia(5%) saturate(19%) hue-rotate(319deg) brightness(86%) contrast(86%)" }} src="/star/star.svg" alt="" />
                 <div>(45 Reviews)</div>
               </div>
-              <div style={{ color: "rgb(97,97,97)", "font-weight": "bold", "font-size": "13px", "margin-top": "6px" }}>{review.name}</div>
-              <div style={{ color: "rgb(97,97,97)", "font-size": "14px", "margin-top": "8px" }}>{review.price}</div>
+              <div style={{ color: "rgb(97,97,97)", fontWeight: "bold", fontSize: "13px", marginTop: "6px" }}>{review.name}</div>
+              <div style={{ color: "rgb(97,97,97)", fontSize: "14px", marginTop: "8px" }}>{review.price}</div>
             </div>
           )
           )}
