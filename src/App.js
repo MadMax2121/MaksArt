@@ -13,9 +13,14 @@ import Footer from './Footer/Footer';
 function App() {
   return (
     <div className="app">
-        <div style={{"background-color":"rgb(248, 248, 252)", "overflow-x": "hidden"}}>
+        <div style={{"background-color":"rgb(248, 248, 252)", position: "fixed", "z-index":"3", width:"100%"}}>
         <Header />
+        </div>
+        
+        <div style={{"background-color":"rgb(248, 248, 252)"}}>
         <FirstContainer />
+        
+        
         </div>
         <div className='secondSection' style={{"background-color":"white"}}>
         <FirstThree/>

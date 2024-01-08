@@ -1,6 +1,6 @@
 import React from 'react'
 import "./FirstContainer.css"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function FirstContainer() {
 
@@ -101,6 +101,14 @@ function FirstContainer() {
         </div>,
     ];
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide(currentSlide => (currentSlide + 1) % slides.length);
+        }, 10000); // 10000 ms for 10 seconds
+    
+        return () => clearInterval(interval); // Cleanup interval on component unmount
+    }, [slides.length]);
+    
     return (
         <main style={{"overflow-x":"hidden"}}>
 

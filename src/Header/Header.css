@@ -1,7 +1,10 @@
 .main {
     display:flex;
-    justify-content: center;
     overflow: hidden;
+    width: 100%;
+    justify-content: center;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
 }
 
 .logo {
