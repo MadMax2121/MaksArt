@@ -3,10 +3,11 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(248, 248, 252);
-    margin-top: 60px;
-    overflow-x:hidden;
+    overflow-x: hidden;
+
 
 }
+
 
 .main_text {
     text-align: left;
@@ -16,15 +17,18 @@
     flex: 0.57;
 }
 
+
 .first_line {
     font-size: 16px;
     color: rgb(149, 140, 128);
 }
 
+
 .first_price {
     font-weight: bold;
     color: rgb(97, 97, 97);
 }
+
 
 .second_price {
     font-weight: bolder;
@@ -32,12 +36,15 @@
     color: rgb(158, 156, 154);
 }
 
+
 .second_line {
     font-size: 30px;
     color: rgb(97, 97, 97);
     margin-top: 0.5px;
 
+
 }
+
 
 .paragraph {
     font-size: 12px;
@@ -46,11 +53,14 @@
     margin-top: 0.3px;
 }
 
+
 .buttons {
     display: flex;
     padding-top: 24px;
 
+
 }
+
 
 .chair_image {
     margin-left: 40px;
@@ -60,7 +70,9 @@
     width: 549px;
     height: 507px;
 
+
 }
+
 
 .add_cart {
     display: flex;
@@ -73,20 +85,24 @@
     margin-right: 20px;
 }
 
-.add_cart > img {
+
+.add_cart>img {
     height: 16px;
     width: 16px;
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
     padding-right: 5px;
 }
 
+
 .add_cart:hover {
     background-color: rgb(214, 214, 214);
 }
 
+
 .add_cart:active {
     background-color: rgb(175, 175, 175);
 }
+
 
 .more_info {
     border: 2px;
@@ -95,17 +111,21 @@
     padding: 14px 20px;
     font-size: 16px;
 
+
 }
+
 
 .more_info:hover {
     background-color: rgb(214, 214, 214);
 }
 
+
 .more_info:active {
     background-color: rgb(175, 175, 175);
 }
 
-.carousel_buttons{
+
+.carousel_buttons {
     display: flex;
     justify-content: center;
     margin-top: 40px;
@@ -114,14 +134,16 @@
     transform: scale(1.5);
 }
 
-.carousel{
+
+.carousel {
     color: rgb(220, 157, 73);
     border: 1px;
-    background-color: rgb(248, 248, 252); 
+    background-color: rgb(248, 248, 252);
     margin-right: 8px;
     display: flex;
     flex-wrap: nowrap;
 }
+
 
 .carousel:hover {
     background-color: rgb(214, 214, 214);
@@ -129,10 +151,11 @@
     border-radius: 100%;
     padding: 0px 3px 2px 3.3px;
     cursor: pointer;
-    
+
 }
 
-.active_carousel{
+
+.active_carousel {
     color: rgb(220, 157, 73);
     border: 1px solid rgb(220, 157, 73);
     border-radius: 100%;
@@ -140,13 +163,14 @@
     padding: 0px 3px 2px 3.3px;
     margin-right: 8px;
 
+
 }
-  
+
 
 .slide_content {
     display: flex;
     width: 300%;
     margin-left: 22cm;
     transition: transform 0.8s ease;
-    
+
 }
