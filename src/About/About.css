@@ -1,0 +1,26 @@
+.image_banner {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.image_banner > img {
+    min-width: 100vh;
+    height: 12cm;
+
+    filter: brightness(30%);
+}
+
+.image_banner > p {
+    position: absolute;
+    width: 16cm;
+    margin-left: 12.5cm;
+    margin-top: 3.5cm;
+    font-size: 24px;
+    color: white;
+    line-height: .8cm;
+    word-break:normal;
+    text-align: center;
+}

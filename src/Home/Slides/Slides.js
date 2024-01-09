@@ -123,7 +123,7 @@ function Slides() {
        <main style={{overflowX:"hidden"}}>
 
 
-           <div className="slide_content" style={{ transform: `translateX(-${currentSlide * 16.53}%)` }}>
+           <div className="slide_content" style={{ transform: `translateX(-${currentSlide * 19.32}%)` }}>
                {slides}
            </div>
            <div className="carousel_buttons">

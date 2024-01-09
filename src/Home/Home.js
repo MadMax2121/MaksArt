@@ -1,8 +1,7 @@
-import './App.css';
-import Slides from './Slides/Slides.js';
-import NewArrivals from './NewArrivals/NewArrivals';
+import Slides from './Slides/Slides';
 import FeaturedProducts from './FeaturedProducts/FeaturedProducts';
 import Footer from './Footer/Footer';
+import NewArrivals from './NewArrivals/NewArrivals';
 
 
 function Home() {
