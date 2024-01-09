@@ -22,7 +22,7 @@ function About() {
           <p>We are a family-owned art gallery located in Framingham, MA.
              Our showroom is open by appointment. Please feel free to contact
              us for more information.</p>
-             <Link to = "/collection">Shop Art</Link>
+             <Link className = "link_to_collection" to = "/collection">Shop Art</Link>
         </div>
           
       </div>

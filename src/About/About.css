@@ -15,7 +15,7 @@
 .image_banner > p {
     position: absolute;
     width: 16cm;
-    margin-left: 12.5cm;
+    margin-left: 11cm;
     margin-top: 3.5cm;
     font-size: 24px;
     color: white;
@@ -45,7 +45,7 @@
     justify-content: center;
     border: 2px;
     background-color: #8b0000;
-    border-radius: 20px;
+    border-radius: 15px;
     color: white;
     padding: 20px 10px;
 }
@@ -57,5 +57,18 @@
     width: 12cm;
     text-align: center;
     line-height: .7cm;
-    
+
+}
+.link_to_collection {
+    text-decoration: none;
+    color: #8b0000;
+    border: 2px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.link_to_collection:hover {
+    transform: scale(1.1);
 }
