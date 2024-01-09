@@ -7,9 +7,8 @@
 }
 
 .image_banner > img {
-    min-width: 100vh;
+    min-width: 50vw;
     height: 12cm;
-
     filter: brightness(30%);
 }
 
@@ -23,4 +22,40 @@
     line-height: .8cm;
     word-break:normal;
     text-align: center;
+}
+
+.about_us {
+    padding-top: 2cm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_us > img {
+    width: auto;
+    height: 10cm;
+    margin-right: 2cm;
+    border-radius: 5px;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px;
+    background-color: #8b0000;
+    border-radius: 20px;
+    color: white;
+    padding: 20px 10px;
+}
+.description > div {
+    font-size: 40px;
+    font-weight: 900;
+}
+.description > p {
+    width: 12cm;
+    text-align: center;
+    line-height: .7cm;
+    
 }
