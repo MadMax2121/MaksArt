@@ -30,7 +30,7 @@ function Footer() {
                     <p style={{ width: "20cm", marginTop: "40px", marginBottom: "20px", fontSize: "20px", textAlign: "center" }}>Subscribe to get latest news, updates and information.</p>
                     <div className='email_input'>
                         <input  className = "email_inp" type="text" placeholder='Enter Email Here...' value = {email} onChange={handleInputChange}/>
-                        <img src="/Footer/arrow_right.svg" alt="" onClick = {clearInput}/>
+                        <img src="/footer_images/arrow_right.svg" alt="" onClick = {clearInput}/>
                     </div>
                 </div>
             </div>
