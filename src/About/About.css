@@ -48,6 +48,12 @@
     border-radius: 15px;
     color: white;
     padding: 20px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    /*Horizontal offset (0): How far to the right the shadow should be.
+    Vertical offset (0): How far down the shadow should be.
+    Blur radius (10px): The larger this value, the more blurred the shadow.
+    Color (rgba(0, 0, 0, 1)): The color of the shadow. The rgba value allows you to set an alpha channel (transparency) for softer shadows.
+*/
 }
 .description > div {
     font-size: 40px;

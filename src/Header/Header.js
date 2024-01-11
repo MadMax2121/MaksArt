@@ -29,7 +29,6 @@ function Header() {
         </button>
         <button className="nav-icon">
           <img className="cart" src="/header/cart.svg" alt="" />
-
         </button>
 
 
