@@ -204,6 +204,8 @@ function Collection() {
 
   const [paintings, setPaintings] = useState([]);
 
+  const [visible, setVisible] = useState(false);
+
   useEffect(() => {
     const fetchData = async () => {
       const querySnapshot = await getDocs(collection(db, "paintings"));
@@ -211,7 +213,7 @@ function Collection() {
       setPaintings(paintingData);
     };
 
-    fetchData();
+    fetchData().then(() => setVisible(true));
   }, []);
 
   const mapToDatabase = async () => {
@@ -220,18 +222,23 @@ function Collection() {
     ));
   };
 
+  
 
   return (
     <div>
       <button onClick={mapToDatabase}>update data</button>
-      <div>
+      <div className = "paintings">
         {paintings.map((painting) => (
-          <div className="painting" key={painting.id}>
-            <div>Title: {painting.title}</div>
-            <img src={painting.img_1} alt="" />
-            <img src={painting.img_2} alt="" />
-            <img src={painting.img_3} alt="" />
-            <p style={{ whiteSpace: "pre-line" }}>Desc: {painting.desc}</p>
+          <div className={`painting ${visible ? 'visible' : ''}`} key={painting.id}>
+            <img className = "pic" src={painting.img_1} alt="" />
+            <img className = "star1" src="/star/star3.png" alt="" />
+            <img className = "star1" src="/star/star3.png" alt="" />
+            <img className = "star1" src="/star/star3.png" alt="" />
+            <img className = "star1" src="/star/star3.png" alt="" />
+            <img className = "star1" src="/star/star3.png" alt="" />
+            <div className='painting_title'>{painting.title}</div>
+            
+            
           </div>
         ))}
       </div>

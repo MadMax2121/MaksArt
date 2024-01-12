@@ -1,4 +1,31 @@
-.painting > img {
-    width: 50px;
+.pic{
+    width: 200px;
     height: auto;
+    margin-right: 5cm;
 }
+
+.paintings {
+    display: grid;
+    grid-template-columns: 7cm 7cm 7cm 7cm;
+    grid-template-rows: 10cm 10cm;
+}
+
+.star1 {
+    width: 30px;
+    height: auto
+}
+
+.painting_title {
+    width: 210px;
+}
+
+.painting {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .painting.visible {
+    opacity: 1;
+  }
+
+
