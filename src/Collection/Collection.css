@@ -1,31 +1,116 @@
-.pic{
-    width: 200px;
-    height: auto;
-    margin-right: 5cm;
+.collection {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.collection > p {
+    width: 25cm;
+    margin-bottom: -1cm;
+}
+
+.collection > h1 {
+    margin-bottom: 0;
+}
+.painting .pic{
+    width: 200px;
+    height: auto;
+    transition: all .2s ease;
+}
+
+.painting:hover .pic{
+    transform: scale(1.1);
+}
+.pic_wrapper {
+    display: inline-block;
+    overflow:hidden;
+}
+
+
+.image_button_spacing {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .paintings {
+    margin-top: 2cm;
     display: grid;
     grid-template-columns: 7cm 7cm 7cm 7cm;
-    grid-template-rows: 10cm 10cm;
+    grid-template-rows: minmax(min-content, max-content);
+    justify-content: center;
 }
 
 .star1 {
-    width: 30px;
+    width: 20px;
     height: auto
+}
+
+.painting_add_to_cart_button{
+    margin-bottom: 20px;
+    width: 80%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid #8b0000;
+    align-items: center;
+    font-family: "Montserrat";
+    transition: all 0.1s ease-in-out;
+    color: #8b0000;
+}
+
+.painting_add_to_cart_button:hover {
+    border: 2px solid #8b0000;
+    transform: scale(1.1);
+
+
 }
 
 .painting_title {
     width: 210px;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+
 }
 
-.painting {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .painting.visible {
-    opacity: 1;
-  }
+.painting_buttons{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.painting_buttons > button {
+    border: none;
+    border-bottom: 2px solid transparent;
+    background-color: white;
+    font-size: 20px;
+    font-family: "Montserrat";
+    outline: none; 
+    cursor: pointer;
+}
+
+.painting_buttons > button:hover {
+    border-bottom-color: black
+}
+
+.painting_buttons > button.active {
+    border-bottom-color: black;
+}
+
+.painting:hover .painting_title{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
 
 

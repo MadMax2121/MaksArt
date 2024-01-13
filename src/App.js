@@ -7,6 +7,7 @@ import Contact from './Contact';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Footer from './Footer/Footer';
+import ProductInfo from './ProductInfo/ProductInfo';
 
 
 function AnimatedRoutes() {
@@ -51,6 +52,12 @@ function AnimatedRoutes() {
         <Route exact path='/contact' element={
           <motion.div initial="initialState" animate="in" exit="out" variants={pageVariants} >
             <Contact />
+            <Footer/>
+          </motion.div>
+        } />
+        <Route exact path='/product_information' element={
+          <motion.div initial="initialState" animate="in" exit="out" variants={pageVariants} >
+            <ProductInfo/>
             <Footer/>
           </motion.div>
         } />
