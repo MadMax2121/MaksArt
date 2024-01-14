@@ -9,7 +9,7 @@ function Contact() {
       <p>Input your contact information and we will try to get back to you right away!</p>
       </div>
       <div className="contact_name">
-        <input placeholder='Name'></input>
+        <input placeholder='Names'></input>
         <input placeholder='Last Name'></input>
       </div>
       <div className="contact_name">
