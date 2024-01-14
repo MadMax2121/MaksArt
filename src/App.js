@@ -3,7 +3,7 @@ import Header from './Header/Header.js';
 import Home from './Home/Home';
 import About from './About/About';
 import Collection from './Collection/Collection';
-import Contact from './Contact';
+import Contact from './Contact/Contact';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Footer from './Footer/Footer';
