@@ -16,7 +16,7 @@ function Contact() {
         <input placeholder='Email' />
       </div>
       <div className='contact_subject'>
-        <input type="text" placeholder='Subjects' />
+        <input type="text" placeholder='Subject' />
 
       </div>
 
