@@ -19,7 +19,7 @@
 
 .product_star_container {
     display: flex;
-    width: 130px; /* Set the width to match .product_review */
+    width: 250px; /* Set the width to match .product_review */
     height: 47px; /* Set the height to match .product_star */
     background-color: #fbbc04; /* Set the background color for the review box */
 }

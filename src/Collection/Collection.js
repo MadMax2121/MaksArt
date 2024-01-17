@@ -1,28 +1,15 @@
 import React from 'react'
-import { db } from '../Firebase'
-import { doc, setDoc, getDoc } from "firebase/firestore";
 import { useState, useEffect, } from 'react';
-import { collection, getDocs } from "firebase/firestore";
 import "./Collection.css";
 import { useNavigate } from 'react-router-dom';
 
 
-function Collection() {
+function Collection({paintings}) {
 
 
-  const [paintings, setPaintings] = useState([]);
+  
 
   const [page, setPage] = useState(1);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const querySnapshot = await getDocs(collection(db, "paintings"));
-      const paintingData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      setPaintings(paintingData);
-    };
-
-    fetchData();
-  }, []);
 
   useEffect(() => {
     window.scrollTo({
@@ -31,6 +18,7 @@ function Collection() {
       behavior: "smooth"
     });
   }, [page]);
+
   const paintingsPerPage = 12;
   const startIndex = (page - 1) * paintingsPerPage;
   const endIndex = startIndex + paintingsPerPage;

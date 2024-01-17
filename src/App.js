@@ -8,6 +8,9 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import { motion, AnimatePresence } from 'framer-motion';
 import Footer from './Footer/Footer';
 import ProductInfo from './ProductInfo/ProductInfo';
+import React, { useState, useEffect } from 'react';
+import { collection, getDocs } from "firebase/firestore";
+import { db } from './Firebase';
 
 
 function AnimatedRoutes() {
@@ -26,7 +29,17 @@ function AnimatedRoutes() {
     },
   };
 
-  
+  const [paintings, setPaintings] = useState([]);
+
+  useEffect (() =>{
+    const fetchData = async () => {
+      const querySnapshot = await getDocs(collection(db, "paintings"));
+      const paintingData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setPaintings(paintingData);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <AnimatePresence mode="wait">
@@ -45,7 +58,7 @@ function AnimatedRoutes() {
         } />
         <Route exact path='/collection' element={
           <motion.div initial="initialState" animate="in" exit="out" variants={pageVariants} >
-            <Collection />
+            <Collection paintings = {paintings}/>
             <Footer/>
           </motion.div>
         } />
@@ -67,6 +80,7 @@ function AnimatedRoutes() {
 }
 
 function App() {
+
   return (
     <Router>
       <div className="app">
