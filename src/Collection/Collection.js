@@ -6,9 +6,6 @@ import { useNavigate } from 'react-router-dom';
 
 function Collection({paintings}) {
 
-
-  
-
   const [page, setPage] = useState(1);
 
   useEffect(() => {

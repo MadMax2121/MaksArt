@@ -4,6 +4,8 @@ import Home from './Home/Home';
 import About from './About/About';
 import Collection from './Collection/Collection';
 import Contact from './Contact/Contact';
+import Login from './Login/Login';
+import Signup from './Login/Signup';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Footer from './Footer/Footer';
@@ -31,7 +33,7 @@ function AnimatedRoutes() {
 
   const [paintings, setPaintings] = useState([]);
 
-  useEffect (() =>{
+  useEffect(() => {
     const fetchData = async () => {
       const querySnapshot = await getDocs(collection(db, "paintings"));
       const paintingData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
@@ -47,32 +49,44 @@ function AnimatedRoutes() {
         <Route exact path='/' element={
           <motion.div initial="initialState" animate="in" exit="out" variants={pageVariants} transition='0.2' >
             <Home />
-            <Footer/>
+            <Footer />
           </motion.div>
         } />
         <Route exact path='/about' element={
           <motion.div initial="initialState" animate="in" exit="out" variants={pageVariants}>
             <About />
-            <Footer/>
+            <Footer />
           </motion.div>
         } />
         <Route exact path='/collection' element={
           <motion.div initial="initialState" animate="in" exit="out" variants={pageVariants} >
-            <Collection paintings = {paintings}/>
-            <Footer/>
+            <Collection paintings={paintings} />
+            <Footer />
           </motion.div>
         } />
         <Route exact path='/contact' element={
           <motion.div initial="initialState" animate="in" exit="out" variants={pageVariants} >
             <Contact />
-            <Footer/>
+            <Footer />
           </motion.div>
         } />
         <Route exact path='/product_information' element={
           <motion.div initial="initialState" animate="in" exit="out" variants={pageVariants} >
-            <ProductInfo/>
-            <Footer/>
+            <ProductInfo />
+            <Footer />
           </motion.div>
+        } />
+        <Route exact path='/login' element={
+          <motion.div initial="initialState" animate="in" exit="out" variants={pageVariants} >
+            <Login />
+            <Footer />
+          </motion.div>
+        } />
+        <Route exact path='/signup' element={
+          <div>
+            <Signup />
+            <Footer />
+          </div>
         } />
       </Routes>
     </AnimatePresence>
@@ -89,7 +103,7 @@ function App() {
         </div>
         <AnimatedRoutes />
 
-        
+
       </div>
     </Router>
   );

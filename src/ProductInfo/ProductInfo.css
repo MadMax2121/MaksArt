@@ -1,14 +1,77 @@
 .productInformation_main {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     margin-top: 60px;
+
+}
+
+
+.back_arrow {
+    align-items: flex-start;
+    margin-right: 15px;
+}
+
+.back_arrow>img {
+    width: 50px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.back_arrow>img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.centered_content {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.product_image > img {
+.product_image>img {
     width: 400px;
     height: auto;
+
 }
+
+.product_image>img {
+    margin-top: 10px;
+    width: 400px;
+    height: auto;
+
+}
+
+.selector_images {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.selector_image {
+    width: 100px;
+    height: auto;
+    margin-left: 20px;
+    border : 2px solid transparent;
+    padding: 5px;
+}
+
+.selector_image:hover {
+    opacity: .6;
+}
+
+.selector_image_active {
+    margin-left: 20px;
+    width: 100px;
+    height: auto;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 20px;
+
+
+}
+
 
 .product_info {
     margin-left: 60px;
@@ -17,17 +80,27 @@
 }
 
 
+.star_display {
+    display: flex;
+    justify-content: space-between;
+}
 .product_star_container {
     display: flex;
-    width: 250px; /* Set the width to match .product_review */
-    height: 47px; /* Set the height to match .product_star */
-    background-color: #fbbc04; /* Set the background color for the review box */
+    width: 100px;
+    /* Set the width to match .product_review */
+    height: 47px;
+    /* Set the height to match .product_star */
+    background-color: #fbbc04;
+    /* Set the background color for the review box */
+}
+
+.review_button {
+    margin-right: 200px;
 }
 
 .product_star {
     width: 50px;
     height: 47px;
-    /* Removed position: absolute and z-index */
 }
 
 
@@ -35,6 +108,3 @@
     font-size: 25px;
     font-weight: 500;
 }
-
-
-

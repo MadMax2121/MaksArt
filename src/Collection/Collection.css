@@ -5,26 +5,28 @@
     align-items: center;
 }
 
-.collection > p {
+.collection>p {
     width: 25cm;
     margin-bottom: -1cm;
 }
 
-.collection > h1 {
+.collection>h1 {
     margin-bottom: 0;
 }
-.painting .pic{
+
+.painting .pic {
     width: 200px;
     height: auto;
     transition: all .2s ease;
 }
 
-.painting:hover .pic{
+.painting:hover .pic {
     transform: scale(1.1);
 }
+
 .pic_wrapper {
     display: inline-block;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 
@@ -34,6 +36,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 .paintings {
     margin-top: 2cm;
     display: grid;
@@ -47,7 +50,7 @@
     height: auto
 }
 
-.painting_add_to_cart_button{
+.painting_add_to_cart_button {
     margin-bottom: 20px;
     width: 80%;
     height: 30px;
@@ -66,7 +69,6 @@
     border: 2px solid #8b0000;
     transform: scale(1.1);
 
-
 }
 
 .painting_title {
@@ -77,40 +79,30 @@
 
 }
 
-.painting_buttons{
+.painting_buttons {
     margin-top: 40px;
     display: flex;
     justify-content: center;
 }
 
-.painting_buttons > button {
+.painting_buttons>button {
     border: none;
     border-bottom: 2px solid transparent;
     background-color: white;
     font-size: 20px;
     font-family: "Montserrat";
-    outline: none; 
+    outline: none;
     cursor: pointer;
 }
 
-.painting_buttons > button:hover {
+.painting_buttons>button:hover {
     border-bottom-color: black
 }
 
-.painting_buttons > button.active {
+.painting_buttons>button.active {
     border-bottom-color: black;
 }
 
-.painting:hover .painting_title{
+.painting:hover .painting_title {
     text-decoration: underline;
 }
-
-
-
-
-
-
-
-
-
-
