@@ -1,6 +1,6 @@
-import React from 'react'
 import './Header.css'
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link} from 'react-router-dom';
+import React from 'react';
 
 
 
@@ -25,7 +25,7 @@ function Header() {
 
       <div className='icons'>
         <button className="nav-icon">
-        <Link to="/login"><img className="profile" src="/header/profile.svg" alt="" /></Link>
+        <Link to = {'/login'}><img className="profile" src="/header/profile.svg" alt="" /></Link>
         </button>
         <button className="nav-icon">
           <img className="cart" src="/header/cart.svg" alt="" />

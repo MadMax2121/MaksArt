@@ -1,36 +1,36 @@
 import React from 'react'
-import { useState, useEffect, } from 'react';
 import "./Collection.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams,} from 'react-router-dom';
 
 
 function Collection({paintings}) {
 
-  const [page, setPage] = useState(1);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
 
-  useEffect(() => {
+  const currentPage = parseInt(searchParams.get('page')) || 1;
+
+  const paintingsPerPage = 12;
+  const startIndex = (currentPage - 1) * paintingsPerPage;
+  const endIndex = startIndex + paintingsPerPage;
+
+  const setPage = (page) => {
+    setSearchParams({ page }); // This updates the URL
+
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: "smooth"
     });
-  }, [page]);
-
-  const paintingsPerPage = 12;
-  const startIndex = (page - 1) * paintingsPerPage;
-  const endIndex = startIndex + paintingsPerPage;
-
-  const navigate = useNavigate();
+  };
 
   const handlePaintingClick = (painting) => {
     navigate('/product_information', { state: { painting: painting } });
   };
 
   return (
-
-
     <div className='collection'>
-      {page === 1 && (
+      {currentPage === 1 && (
         <>
           <h1>Our Collection</h1>
           <p>Welcome to our collection! Please do not hesitate to look at all of our products, you can click on any of them for more information, and you can add them to cart and purchase them. Or you can also leave a review if you like!</p>
@@ -64,8 +64,8 @@ function Collection({paintings}) {
         ))}
       </div>
       <div className="painting_buttons">
-        <button className={page === 1 ? "active" : ""} style={{ marginRight: "30px" }} onClick={() => setPage(1)}>1</button>
-        <button className={page === 2 ? "active" : ""} onClick={() => setPage(2)}>2</button>
+        <button className={currentPage === 1 ? "active" : ""} style={{ marginRight: "30px" }} onClick={() => setPage(1)}>1</button>
+        <button className={currentPage === 2 ? "active" : ""} onClick={() => setPage(2)}>2</button>
       </div>
     </div>
   )

@@ -1,29 +1,39 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import { AuthContext } from './AuthContext';
 import { Link } from 'react-router-dom';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../Firebase'; // Adjust the path as necessary
-
+import { signInWithEmailAndPassword,  GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth } from '../Firebase';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
-  const { currentUser } = useContext(AuthContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/');
+      navigate(-1);
     } catch (error) {
     alert(error);
     }
   };
+
+  
+    const signInWithGoogle = async () => {
+      const provider = new GoogleAuthProvider();
+  
+      try {
+        await signInWithPopup(auth, provider);
+        navigate(-1);
+      } catch (error) {
+        console.error(error);
+        // Handle errors here
+      }
+    };
+  
 
   return (
     <div>
@@ -45,7 +55,8 @@ const LoginPage = () => {
         <button type="submit">Login</button>
       </form>
 
-      <Link to = '/signup'>CReate account</Link>
+      <button onClick={signInWithGoogle}>Sign in with Google</button>
+      <Link to = '/signup'>Create account</Link>
     </div>
   );
 };

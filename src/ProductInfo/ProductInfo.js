@@ -1,14 +1,13 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import "./ProductInfo.css";
-
-import { useNavigate } from 'react-router-dom';
 
 function ProductInformation() {
     const location = useLocation();
     const painting = location.state && location.state.painting;
 
+    
     useEffect(() => {
         window.scrollTo({
             top: 0,
@@ -20,7 +19,7 @@ function ProductInformation() {
     const navigate = useNavigate();
 
     const goBack = () => {
-        navigate(-1);
+        navigate(-1, { state: { navigatedBack: true } });;
     };
     const image_list = [painting.img_1, painting.img_2, painting.img_3,];
 
