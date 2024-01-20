@@ -9,12 +9,10 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
 
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
@@ -27,9 +25,8 @@ const Signup = () => {
       });
 
       // Redirect or additional logic after successful account creation
-      navigate('/dashboard');
+      navigate(-2);
     } catch (error) {
-      setError('Failed to create an account');
       console.log(error);
     }
   };
@@ -37,7 +34,6 @@ const Signup = () => {
   return (
     <div>
       <h2>Sign Up</h2>
-      {error && <p>{error}</p>}
       <form onSubmit={handleSubmit}>
         <input
           type="text"

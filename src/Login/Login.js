@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { signInWithEmailAndPassword,  GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '../Firebase';
+import './Login.css'
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -17,7 +17,7 @@ const LoginPage = () => {
       await signInWithEmailAndPassword(auth, email, password);
       navigate(-1);
     } catch (error) {
-    alert(error);
+    alert("Invalid credentials, please try again");
     }
   };
 
@@ -29,17 +29,16 @@ const LoginPage = () => {
         await signInWithPopup(auth, provider);
         navigate(-1);
       } catch (error) {
-        console.error(error);
-        // Handle errors here
+        alert("Invalid credentials, please try again");
+      
       }
     };
   
 
   return (
-    <div>
-      <h2>Login</h2>
-      {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit}>
+    <main className='Login_main'>
+      <h2 style={{fontSize : "28px"}}>Login</h2>
+      <form className = "login_form" onSubmit={handleSubmit}>
         <input
           type="email"
           placeholder="Email"
@@ -52,12 +51,12 @@ const LoginPage = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        <button type="submit">Sign In</button>
       </form>
 
       <button onClick={signInWithGoogle}>Sign in with Google</button>
       <Link to = '/signup'>Create account</Link>
-    </div>
+    </main>
   );
 };
 
