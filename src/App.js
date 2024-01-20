@@ -8,12 +8,12 @@ import Login from './Login/Login';
 import Signup from './Login/Signup';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { AuthProvider } from './Login/AuthContext';
 import Footer from './Footer/Footer';
 import ProductInfo from './ProductInfo/ProductInfo';
 import React, { useState, useEffect } from 'react';
 import { collection, getDocs } from "firebase/firestore";
-import { db } from './Firebase';
-
+import { db} from './Firebase';
 
 function AnimatedRoutes() {
   const location = useLocation(); // Get the current location
@@ -96,6 +96,7 @@ function AnimatedRoutes() {
 function App() {
 
   return (
+    <AuthProvider>
     <Router>
       <div className="app">
         <div style={{ backgroundColor: "white", zIndex: "3", width: "100%" }}>
@@ -106,6 +107,7 @@ function App() {
 
       </div>
     </Router>
+    </AuthProvider>
   );
 }
 

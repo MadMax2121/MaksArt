@@ -25,7 +25,7 @@ function Header() {
 
       <div className='icons'>
         <button className="nav-icon">
-          <img className="profile" src="/header/profile.svg" alt="" />
+        <Link to="/login"><img className="profile" src="/header/profile.svg" alt="" /></Link>
         </button>
         <button className="nav-icon">
           <img className="cart" src="/header/cart.svg" alt="" />
