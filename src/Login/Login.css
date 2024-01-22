@@ -21,7 +21,7 @@
     font-family: Montserrat;
     border: 2px solid lightslategray; /* Keep the initial border as 1px */
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     outline: none;
     transition: border 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
