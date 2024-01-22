@@ -1,4 +1,4 @@
-.Login_main {
+.login_main {
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -7,36 +7,39 @@
 }
 
 .login_form {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.login_form > input {
+.login_form input {
     width: 300px;
     font-size: 20px;
-    margin-bottom: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     font-family: Montserrat;
-    border: 2px solid lightslategray; /* Keep the initial border as 1px */
+    border: 2px solid lightslategray;
+    /* Keep the initial border as 1px */
     padding: 5px 10px;
     border-radius: 5px;
     outline: none;
     transition: border 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
-.login_form > input:hover {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15), 0 0 0 1px lightslategray; /* Add an extra layer of box-shadow to simulate the border */
+.login_form input:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15), 0 0 0 1px lightslategray;
+    /* Add an extra layer of box-shadow to simulate the border */
 }
 
-.login_form > input:focus {
+.login_form input:focus {
     border: 2px solid black;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.login_form > button {
+.login_form>button {
     font-family: Montserrat;
+    width: 100%;
     background-color: #8b0000;
     font-size: 22px;
     color: white;
@@ -46,6 +49,61 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.login_form > button:hover {
+.login_form>button:hover {
     transform: scale(1.05);
+}
+
+.login_form>button {
+    margin: 30px 0px;
+}
+
+.google_button {
+    display: flex;
+    border: 2px solid black;
+    padding: 4px 10px;
+    border-radius: 40px;
+    font-family: Roboto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.1s ease-in-out;
+
+}
+
+.google_button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.google_button>img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.google_button>p {
+    font-weight: 500;
+
+}
+
+.password_container {
+    display: flex;
+    position: relative;
+}
+
+.eye_icon{
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 3.5px;
+}
+
+.eye_icon:hover{
+   cursor: pointer;
+}
+
+.create_account {
+    margin-top: 20px;
+    display: flex;
+}
+
+.create_account > span{
+    margin-right: 10px;
 }

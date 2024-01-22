@@ -27,7 +27,7 @@ function ProductInformation() {
     const navigate = useNavigate();
 
     const goBack = () => {
-        navigate(-1, { state: { navigatedBack: true } });;
+        navigate(-1);;
     };
     const image_list = [painting.img_1, painting.img_2, painting.img_3,];
 
