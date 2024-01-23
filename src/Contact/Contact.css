@@ -12,3 +12,58 @@
     align-items: center;
     justify-content: center;
 }
+
+.contact_name input, .contact_subject textarea{
+    width: 200px;
+    font-size: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    font-family: Montserrat;
+    border: 2px solid lightslategray;
+    /* Keep the initial border as 1px */
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.contact_subject textarea{
+ width: 430px;
+ height: 150px;
+
+}
+
+.contact_subject {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contact_subject > button {
+    font-family: Montserrat;
+    background-color: #8b0000;
+    font-size: 22px;
+    color: white;
+    padding: 10px 20px;
+    border: 2px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+.contact_name input:hover,   .contact_subject textarea:hover{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15), 0 0 0 1px lightslategray;
+    /* Add an extra layer of box-shadow to simulate the border */
+}
+
+.contact_name input:focus {
+    border: 2px solid black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.contact_subject>button:hover {
+    transform: scale(1.05);
+}
+.contact_subject textarea:focus {
+    border: 2px solid black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
