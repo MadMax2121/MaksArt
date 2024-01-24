@@ -1,13 +1,34 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { collection, query, onSnapshot, doc, orderBy } from 'firebase/firestore';
+import { db } from '../Firebase';
 import "./ProductInfo.css";
 import CustomerReviews from './CustomerReviews/CustomerReviews';
+import Review from './Review/Review';
 
 function ProductInformation() {
     const location = useLocation();
     const painting = location.state && location.state.painting;
     const [image, setImage] = useState(0);
+    const [reviews, setReviews] = useState([]);
+    const paintingId = painting.id;
+
+  useEffect(() => {
+    const paintingRef = doc(db, 'paintings', paintingId);
+    const reviewsCollectionRef = collection(paintingRef, 'reviews');
+    const q = query(reviewsCollectionRef, orderBy('createdAt', 'desc'));
+
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const updatedReviews = [];
+      querySnapshot.forEach((doc) => {
+        updatedReviews.push({ id: doc.id, ...doc.data() });
+      });
+      setReviews(updatedReviews);
+    });
+
+    return () => unsubscribe(); // Detach listener on unmount
+  }, [paintingId]);
 
     useEffect(() => {
         window.scrollTo({
@@ -67,7 +88,8 @@ function ProductInformation() {
                 </div>
             </div>
             <div>
-                <CustomerReviews />
+                <Review paintingId={painting.id} setReviews={setReviews}/>
+                <CustomerReviews reviews={reviews}/>
             </div>
         </main>
     );
