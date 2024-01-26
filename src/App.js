@@ -14,6 +14,7 @@ import ProductInfo from './ProductInfo/ProductInfo';
 import React, { useState, useEffect } from 'react';
 import { collection, getDocs } from "firebase/firestore";
 import { db} from './Firebase';
+import {DimmedScreenProvider } from './DimmedScreenContext';
 
 function AnimatedRoutes() {
   const location = useLocation(); // Get the current location
@@ -72,7 +73,7 @@ function AnimatedRoutes() {
         } />
         <Route exact path='/product_information' element={
           <motion.div initial="initialState" animate="in" exit="out" variants={pageVariants} >
-            <ProductInfo />
+            <ProductInfo/>
             <Footer />
           </motion.div>
         } />
@@ -96,6 +97,7 @@ function AnimatedRoutes() {
 function App() {
 
   return (
+    <DimmedScreenProvider>
     <AuthProvider>
     <Router>
       <div className="app">
@@ -103,11 +105,10 @@ function App() {
           <Header />
         </div>
         <AnimatedRoutes />
-
-
       </div>
     </Router>
     </AuthProvider>
+    </DimmedScreenProvider>
   );
 }
 
