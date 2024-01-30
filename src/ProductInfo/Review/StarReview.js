@@ -31,24 +31,11 @@ function StarReview({ onRatingSelected }) {
   };
 
   return (
-    <div
-      className="review_star_display"
-      ref={starContainerRef}
-      onMouseMove={handleMouseMove}
-      onClick={handleStarClick}
-    >
-      <div
-        className="review_product_star_container"
-        style={{ width: `${displayedRating * 10}%` }}
-      />
+    <div className="review_star_display" ref={starContainerRef} onMouseMove={handleMouseMove} onClick={handleStarClick}>
+      <div className="review_product_star_container" style={{ width: `${displayedRating * 10}%` }} />
       <div className="review_stars">
         {[...Array(5)].map((_, index) => (
-          <img
-            key={index}
-            className="review_product_star"
-            src="/star/star3.png"
-            alt=""
-          />
+          <img key={index} className="review_product_star" src="/star/star3.png" alt="" />
         ))}
       </div>
     </div>
