@@ -8,6 +8,7 @@
 .profile_info_main>img {
     margin-right: 40px;
     width: 80px;
+    height: 80px;
     border: 1px transparent;
     border-radius: 100%;
 }

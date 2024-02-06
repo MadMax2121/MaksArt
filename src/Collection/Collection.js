@@ -32,60 +32,45 @@ function Collection({ paintings }) {
         <>
           <h1>Our Collection</h1>
           <p>
-            Welcome to our collection! Please do not hesitate to look at all of
-            our products, you can click on any of them for more information, and
-            you can add them to cart and purchase them. Or you can also leave a
-            review if you like!
+            Welcome to our collection! Please do not hesitate to look at all of our products, you can click on any of them for more information, and
+            you can add them to cart and purchase them. Or you can also leave a review if you like!
           </p>
         </>
       )}
       <div className="paintings">
         {paintings.slice(startIndex, endIndex).map((painting) => (
-          <div
-            style={{ textDecoration: "none" }}
-            className="painting"
-            key={painting.id}
-            onClick={() => handlePaintingClick(painting)}
-          >
-            <div className="image_button_spacing">
-              <div>
-                <div className="pic_wrapper">
-                  <img className="pic" src={painting.img_1} alt="" />
+          
+            <div style={{ textDecoration: "none" }} className="painting" key={painting.id} onClick={() => handlePaintingClick(painting)}>
+              <div className="image_button_spacing">
+                <div>
+                  <div className="pic_wrapper">
+                    <img className="pic" src={painting.img_1} alt="" />
+                  </div>
+                  <div className="painting_title">{painting.title}</div>
+                  <img className="star1" src="/star/star3.png" alt="" />
+                  <img className="star1" src="/star/star3.png" alt="" />
+                  <img className="star1" src="/star/star3.png" alt="" />
+                  <img className="star1" src="/star/star3.png" alt="" />
+                  <img className="star1" src="/star/star3.png" alt="" />
+                  <div className="painting_price">{painting.price_string}</div>
                 </div>
-                <div className="painting_title">{painting.title}</div>
-                <img className="star1" src="/star/star3.png" alt="" />
-                <img className="star1" src="/star/star3.png" alt="" />
-                <img className="star1" src="/star/star3.png" alt="" />
-                <img className="star1" src="/star/star3.png" alt="" />
-                <img className="star1" src="/star/star3.png" alt="" />
-                <div className="painting_price">{painting.price_string}</div>
-              </div>
-              <div>
-                <div onClick={(e) => e.stopPropagation()}>
-                  <button
-                    style={{ textDecoration: "none" }}
-                    className="painting_add_to_cart_button"
-                  >
-                    Add to Cart
-                  </button>
+                <div>
+                  <div onClick={(e) => e.stopPropagation()}>
+                    <button style={{ textDecoration: "none" }} className="painting_add_to_cart_button">
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+        
         ))}
       </div>
       <div className="painting_buttons">
-        <button
-          className={currentPage === 1 ? "active" : ""}
-          style={{ marginRight: "30px" }}
-          onClick={() => setPage(1)}
-        >
+        <button className={currentPage === 1 ? "active" : ""} style={{ marginRight: "30px" }} onClick={() => setPage(1)}>
           1
         </button>
-        <button
-          className={currentPage === 2 ? "active" : ""}
-          onClick={() => setPage(2)}
-        >
+        <button className={currentPage === 2 ? "active" : ""} onClick={() => setPage(2)}>
           2
         </button>
       </div>

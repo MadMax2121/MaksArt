@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 //import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { auth } from '../Firebase';
@@ -7,6 +7,7 @@ import "./ProfileInfo.css"
 
 function ProfileInfo() {
     const { setCurrentUser, currentUser } = useContext(AuthContext); // If you're managing the current user in context
+    const [profile_picture, setProfile_picture] = useState("/login/no-profile-picture-15255.png");
 
     const handleLogout = async () => {
         try {
@@ -16,16 +17,12 @@ function ProfileInfo() {
             console.error("Error signing out: ", error);
         }
     };
-    console.log("User ID: ", currentUser.uid);
-    console.log("Display Name: ", currentUser.displayName);
-    console.log("Email: ", currentUser.email);
-    console.log("Photo URL: ", currentUser.photoURL);
-    console.log("Email Verified: ", currentUser.emailVerified);
-    console.log("Provider Data: ", currentUser.providerData);
+
     return (
         <main style = {{display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
             <h1 >Profile Information</h1>
             <div className='profile_info_main'>
+                
                 <img src={(currentUser.photoURL) ? currentUser.photoURL : "/login/no-profile-picture-15255.png"} alt=""/>
                 <div className='user_info'>
                     <p><b>Name:</b> {currentUser.displayName}</p>
